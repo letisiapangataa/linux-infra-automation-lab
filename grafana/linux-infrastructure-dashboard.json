@@ -1,0 +1,214 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "Linux Infrastructure Monitoring",
+    "tags": ["linux", "infrastructure", "security"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "CPU Usage",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "100 - (avg by(instance) (irate(node_cpu_seconds_total{mode=\"idle\"}[5m])) * 100)",
+            "legendFormat": "CPU Usage %",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "min": 0,
+            "max": 100,
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 70},
+                {"color": "red", "value": 90}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 8, "w": 6, "x": 0, "y": 0}
+      },
+      {
+        "id": 2,
+        "title": "Memory Usage",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "(1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100",
+            "legendFormat": "Memory Usage %",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "min": 0,
+            "max": 100,
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 80},
+                {"color": "red", "value": 95}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 8, "w": 6, "x": 6, "y": 0}
+      },
+      {
+        "id": 3,
+        "title": "Disk Usage",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "max((1 - (node_filesystem_avail_bytes{fstype!=\"tmpfs\"} / node_filesystem_size_bytes{fstype!=\"tmpfs\"})) * 100)",
+            "legendFormat": "Disk Usage %",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "min": 0,
+            "max": 100,
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 80},
+                {"color": "red", "value": 95}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 8, "w": 6, "x": 12, "y": 0}
+      },
+      {
+        "id": 4,
+        "title": "System Load",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "node_load1",
+            "legendFormat": "Load 1m",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "none",
+            "decimals": 2,
+            "thresholds": {
+              "steps": [
+                {"color": "green", "value": null},
+                {"color": "yellow", "value": 2},
+                {"color": "red", "value": 4}
+              ]
+            }
+          }
+        },
+        "gridPos": {"h": 8, "w": 6, "x": 18, "y": 0}
+      },
+      {
+        "id": 5,
+        "title": "CPU Usage Over Time",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "100 - (avg by(instance) (irate(node_cpu_seconds_total{mode=\"idle\"}[5m])) * 100)",
+            "legendFormat": "CPU Usage %",
+            "refId": "A"
+          }
+        ],
+        "yAxes": [
+          {"min": 0, "max": 100, "unit": "percent"}
+        ],
+        "gridPos": {"h": 9, "w": 12, "x": 0, "y": 8}
+      },
+      {
+        "id": 6,
+        "title": "Memory Usage Over Time",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "(1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100",
+            "legendFormat": "Memory Usage %",
+            "refId": "A"
+          }
+        ],
+        "yAxes": [
+          {"min": 0, "max": 100, "unit": "percent"}
+        ],
+        "gridPos": {"h": 9, "w": 12, "x": 12, "y": 8}
+      },
+      {
+        "id": 7,
+        "title": "Network Traffic",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "irate(node_network_receive_bytes_total{device!=\"lo\"}[5m]) * 8",
+            "legendFormat": "Inbound - {{device}}",
+            "refId": "A"
+          },
+          {
+            "expr": "irate(node_network_transmit_bytes_total{device!=\"lo\"}[5m]) * 8",
+            "legendFormat": "Outbound - {{device}}",
+            "refId": "B"
+          }
+        ],
+        "yAxes": [
+          {"unit": "bps"}
+        ],
+        "gridPos": {"h": 9, "w": 24, "x": 0, "y": 17}
+      },
+      {
+        "id": 8,
+        "title": "Disk I/O",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "irate(node_disk_read_bytes_total[5m])",
+            "legendFormat": "Read - {{device}}",
+            "refId": "A"
+          },
+          {
+            "expr": "irate(node_disk_written_bytes_total[5m])",
+            "legendFormat": "Write - {{device}}",
+            "refId": "B"
+          }
+        ],
+        "yAxes": [
+          {"unit": "Bps"}
+        ],
+        "gridPos": {"h": 9, "w": 12, "x": 0, "y": 26}
+      },
+      {
+        "id": 9,
+        "title": "System Uptime",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "node_time_seconds - node_boot_time_seconds",
+            "legendFormat": "Uptime",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s"
+          }
+        },
+        "gridPos": {"h": 9, "w": 12, "x": 12, "y": 26}
+      }
+    ],
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "refresh": "30s"
+  }
+}

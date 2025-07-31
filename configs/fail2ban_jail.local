@@ -1,0 +1,68 @@
+# Fail2Ban Configuration for SSH Security
+# Custom jail configuration for enhanced security
+
+[DEFAULT]
+# Ban hosts for 1 hour
+bantime = 3600
+
+# A host is banned if it has generated "maxretry" during the last "findtime" seconds
+findtime = 600
+
+# Number of failures before a host gets banned
+maxretry = 3
+
+# Backend for log processing
+backend = systemd
+
+# Email settings
+destemail = admin@localhost
+sender = fail2ban@localhost
+mta = sendmail
+
+# Action shortcuts
+action = %(action_mwl)s
+
+[sshd]
+enabled = true
+port = 2222
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+bantime = 3600
+findtime = 600
+
+[sshd-ddos]
+enabled = true
+port = 2222
+filter = sshd-ddos
+logpath = /var/log/auth.log
+maxretry = 6
+bantime = 1800
+
+[apache-auth]
+enabled = false
+port = http,https
+filter = apache-auth
+logpath = /var/log/apache*/*error.log
+maxretry = 6
+
+[apache-badbots]
+enabled = false
+port = http,https
+filter = apache-badbots
+logpath = /var/log/apache*/*access.log
+maxretry = 2
+
+[apache-noscript]
+enabled = false
+port = http,https
+filter = apache-noscript
+logpath = /var/log/apache*/*access.log
+maxretry = 6
+
+[apache-overflows]
+enabled = false
+port = http,https
+filter = apache-overflows
+logpath = /var/log/apache*/*error.log
+maxretry = 2

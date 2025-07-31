@@ -1,0 +1,34 @@
+# SSH Hardening Configuration
+# This file contains hardened SSH settings for security
+
+Protocol 2
+Port 2222
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+PermitEmptyPasswords no
+ChallengeResponseAuthentication no
+UsePAM yes
+X11Forwarding no
+PrintMotd no
+TCPKeepAlive no
+ClientAliveInterval 300
+ClientAliveCountMax 2
+LoginGraceTime 60
+MaxAuthTries 3
+MaxSessions 2
+AllowUsers sysadmin
+DenyUsers root
+Banner /etc/issue.net
+Compression no
+LogLevel VERBOSE
+StrictModes yes
+IgnoreRhosts yes
+RhostsRSAAuthentication no
+HostbasedAuthentication no
+
+# Additional security settings
+KexAlgorithms curve25519-sha256@libssh.org,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+MACs hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512
