@@ -1,4 +1,4 @@
-﻿# Linux Infrastructure Automation Lab
+﻿# Linux Infrastructure Automation Lab (Development)
 
 A practical production-ready Linux infrastructure management and security lab showcasing enterprise-grade system engineering practices. This project showcases automated deployment, security hardening, monitoring, and backup solutions suitable for public sector and critical infrastructure environments.
 
@@ -347,4 +347,5 @@ This project demonstrates:
 - **Scalable Design**: Easily adaptable to various environments and requirements
 
 **Perfect for showcasing system administration, DevOps, and cybersecurity expertise in professional portfolios and interviews.**
+
 
