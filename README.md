@@ -1,6 +1,6 @@
 ﻿# Linux Infrastructure Automation Lab (Development)
 
-An almost* production-ready Linux infrastructure management and security lab showcasing enterprise-grade system engineering practices. This project showcases automated deployment, security hardening, monitoring, and backup solutions suitable for public sector and critical infrastructure environments.
+An *almost* production-ready Linux infrastructure management and security lab showcasing enterprise-grade system engineering practices. This project showcases automated deployment, security hardening, monitoring, and backup solutions suitable for public sector and critical infrastructure environments.
 
 ---
 
@@ -83,23 +83,23 @@ sudo ./setup.sh
 ## Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                    Linux Infrastructure Lab                         │
-│                                                                     │
-│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐ │
-│  │   Security      │    │   Monitoring    │    │  Log Aggregation│ │
-│  │   Layer         │    │   Stack         │    │     System      │ │
-│  │                 │    │                 │    │                 │ │
-│  │ • SSH (2222)    │    │ • Prometheus    │    │ • rsyslog (514) │ │
-│  │ • Fail2Ban      │    │ • Grafana (3000)│   │ • Log Analysis  │ │
-│  │ • Firewall      │    │ • Node Exporter │    │ • Retention     │ │
-│  │ • AIDE          │    │ • Alerting      │    │ • Monitoring    │ │
-│  │ • Auditing      │    │ • Dashboards    │    │ • Rotation      │ │
-│  └─────────────────┘    └─────────────────┘    └─────────────────┘ │
-│                                                                     │
-│  ┌─────────────────────────────────────────────────────────────┐   │
-│  │                    Backup & Recovery                        │   │
-│  │                                                             │   │
+┌───────────────────────────────────────────────────────────────────┐
+│                    Linux Infrastructure Lab                       │
+│                                                                   │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐│
+│  │   Security      │    │   Monitoring    │    │  Log Aggregation││
+│  │   Layer         │    │   Stack         │    │     System      ││
+│  │                 │    │                 │    │                 ││
+│  │ • SSH (2222)    │    │ • Prometheus    │    │ • rsyslog (514) ││
+│  │ • Fail2Ban      │    │ • Grafana (3000)│    │ • Log Analysis  ││
+│  │ • Firewall      │    │ • Node Exporter │    │ • Retention     ││
+│  │ • AIDE          │    │ • Alerting      │    │ • Monitoring    ││
+│  │ • Auditing      │    │ • Dashboards    │    │ • Rotation      ││
+│  └─────────────────┘    └─────────────────┘    └─────────────────┘│
+│                                                                   │
+│  ┌────────────────────────────────────────────────────────────┐   │
+│  │                    Backup & Recovery                       │   │
+│  │                                                            │   │
 │  │  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐     │   │
 │  │  │   Daily     │    │   Weekly    │    │   Monthly   │     │   │
 │  │  │  (02:00)    │    │  (Sun 03:00)│    │  (1st 04:00)│     │   │
@@ -109,8 +109,8 @@ sudo ./setup.sh
 │  │  │ • Logs      │    │ • Database  │    │   Storage   │     │   │
 │  │  │ • Validation│    │ • Validation│    │ • Compliance│     │   │
 │  │  └─────────────┘    └─────────────┘    └─────────────┘     │   │
-│  └─────────────────────────────────────────────────────────────┘   │
-└─────────────────────────────────────────────────────────────────────┘
+│  └────────────────────────────────────────────────────────────┘   │
+└───────────────────────────────────────────────────────────────────┘
 ```
 
 ---
@@ -285,7 +285,7 @@ make clean       # Remove all components
 
 ## Contributing
 
-Contributions are welcome! This project serves as both a learning resource and a production-ready infrastructure template.
+All contributions are welcome! This project serves as both a learning resource and a production-ready infrastructure template.
 
 ### Development Setup
 ```bash
@@ -309,7 +309,7 @@ MIT License - See LICENSE file for details
 
 ---
 
-## References & Resources
+## References & Resources (Learning & Development)
 
 ### Security Standards
 - [CIS Benchmarks for Linux](https://www.cisecurity.org/cis-benchmarks/)
@@ -339,14 +339,12 @@ For questions, issues, or contributions:
 
 ## Project Highlights
 
-This project demonstrates:
 - **Enterprise-grade Infrastructure**: Production-ready automation and monitoring
 - **Security-first Approach**: Comprehensive hardening and compliance
 - **Operational Excellence**: Automated deployment, monitoring, and maintenance
 - **Educational Value**: Real-world skills development and best practices
 - **Scalable Design**: Easily adaptable to various environments and requirements
 
-**Perfect for showcasing system administration, DevOps, and cybersecurity expertise in professional portfolios and interviews.**
 
 
 
