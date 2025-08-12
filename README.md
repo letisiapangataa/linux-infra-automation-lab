@@ -1,6 +1,6 @@
 # Linux Infrastructure Automation Lab
 
-A practical lab for automating, securing, and managing Linux infrastructure — ideal for enterprise, public sector, and training environments.
+A practical lab for automating, securing, and managing Linux infrastructure.
 
 ---
 
@@ -113,3 +113,4 @@ MIT License
 - CIS Benchmarks: https://www.cisecurity.org/cis-benchmarks/  
 - Prometheus Documentation: https://prometheus.io/docs/  
 - Grafana Documentation: https://grafana.com/docs/
+
