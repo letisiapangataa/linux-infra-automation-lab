@@ -2,7 +2,7 @@
 
 *Note: This is for Linux operating system only.*
 
-This Linux Infrastructure Automation Lab is a comprehensive toolkit for automating, securing, monitoring, and managing Linux servers. It includes scripts and configurations for system hardening, centralized logging, monitoring with Prometheus and Grafana, automated backups, and more. The project is designed for DevOps, security teams, and system administrators to quickly deploy production-grade infrastructure with best practices.
+This Linux Infrastructure Automation Lab is a comprehensive toolkit for automating, securing, monitoring, and managing Linux servers. It includes scripts and configurations for system hardening, centralized logging, monitoring with Prometheus and Grafana, automated backups, and more.
 
 ## Step-by-Step Instructions
 
@@ -206,5 +206,6 @@ make dev-test
 ## License
 
 MIT License
+
 
 
