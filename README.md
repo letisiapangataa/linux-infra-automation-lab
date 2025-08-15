@@ -6,7 +6,9 @@ This Linux Infrastructure Automation Lab is a comprehensive toolkit for automati
 
 ## Linux Automation Lab Preview
 
-<img width="669" height="366" alt="image" src="https://github.com/user-attachments/assets/2d7e080c-b665-4de2-b6de-80627afd92f2" />
+<img width="669" height="366" alt="image" src="linux-infra-automation-lab-1.png" />
+
+<img width="669" height="366" alt="Linux Automation Lab Screenshot 2" src="linux-infra-automation-lab-2.png" />
 
 ## Step-by-Step Instructions
 
