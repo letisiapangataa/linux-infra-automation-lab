@@ -1,5 +1,4 @@
 # 🐧 Linux Infrastructure Automation Lab
-## Letisia Pangata'a
 
 *Note: This is for Linux operating system only.*
 
@@ -213,6 +212,13 @@ make dev-test
 ## License
 
 MIT License
+
+
+---
+
+## Disclaimer
+
+This project was developed using a combination of publicly available learning resources, reference books, open source projects, and artificial intelligence tools. All efforts have been made to attribute and comply with relevant licenses. Contributions and insights from the broader open source and educational communities are gratefully acknowledged.
 
 
 
