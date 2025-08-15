@@ -2,7 +2,7 @@
 
 *Note: This is for Linux operating system only.*
 
-![Linux Diagram](linux-infra-automation-lab.png)
+<img width="669" height="366" alt="image" src="https://github.com/user-attachments/assets/2d7e080c-b665-4de2-b6de-80627afd92f2" />
 
 This Linux Infrastructure Automation Lab is a comprehensive toolkit for automating, securing, monitoring, and managing Linux servers. It includes scripts and configurations for system hardening, centralized logging, monitoring with Prometheus and Grafana, automated backups, and more.
 
@@ -208,6 +208,7 @@ make dev-test
 ## License
 
 MIT License
+
 
 
 
