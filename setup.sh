@@ -22,7 +22,7 @@ print_banner() {
     echo -e "${PURPLE}"
     echo "╔══════════════════════════════════════════════════════════════════════╗"
     echo "║                                                                      ║"
-    echo "║        🐧 Linux Infrastructure Automation Lab Setup 🐧              ║"
+    echo "║         🐧 Linux Infrastructure Automation Lab Setup 🐧              ║"
     echo "║                                                                      ║"
     echo "║  A comprehensive Linux infrastructure management and security lab    ║"
     echo "║                                                                      ║"
