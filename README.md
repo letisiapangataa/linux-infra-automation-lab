@@ -1,4 +1,5 @@
-# Linux Infrastructure Automation Lab
+# 🐧 Linux Infrastructure Automation Lab
+## Letisia Pangata'a
 
 *Note: This is for Linux operating system only.*
 
